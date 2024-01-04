@@ -3,7 +3,7 @@ import random
 testFlag = False
 class ScriptGenerator:
     def __init__(self, modeSelect):
-        openai.api_key = "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"
+        openai.api_key = "YOUR PRIVATE OPENAI KEY"
         systemMsgArray = ['You are a writer who generates funny made up senarios for TikTok that are less than a minute long. Keep in mind that they will be read out by a single narrator.','You are a writer who writes horror senarios for TikTok that are less than a minute long. They should always end abruptly and on cliffhangers. Keep in mind that they will be read out by a single narrator as if they were in the past. Keep things scary as well.','You are a writer who generates fake reddit posts for TikTok that are less than a minute long. Keep in mind that they will be read out by a single narrator.']
         self.system_msg = systemMsgArray[modeSelect]
 
