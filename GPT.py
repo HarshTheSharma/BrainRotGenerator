@@ -1,4 +1,5 @@
 import openai
+import random
 class ScriptGenerator:
     def __init__(self, modeSelect): # MODE 1 = FUNNY | MODE 2 = HORROR | MODE 3 = REDDIT [CURRENTLY NON-FUNCTIONAL DUE TO POORLY-WRITTEN PROMPT]
         openai.api_key = "ENTER SECRET KEY HERE"
@@ -10,7 +11,7 @@ class ScriptGenerator:
         response = openai.ChatCompletion.create(
             model = "gpt-3.5-turbo",
             messages = messages,
-            temperature = 1,
+            temperature = random.uniform(0.4, 1.0),
             max_tokens = 200,
         )
         content = response.choices[0].message["content"]
